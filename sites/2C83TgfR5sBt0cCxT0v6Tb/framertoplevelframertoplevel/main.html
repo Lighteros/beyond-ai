@@ -1,0 +1,88 @@
+import * as React from "react" import * as ReactDOM from "react-dom/client"
+import * as Framer from "framer" const routes = {bJPk_W2Lr: {elements: {}, page:
+Framer.lazy(() =>
+import("https://framerusercontent.com/modules/ffc5MZAYCDiRhcKtjcl7/pCKJsZdQnJWFkDcTCX9J/bJPk_W2Lr.js")),
+path: "/"}, nOf5rOPWv: {elements: {zG1lSi1Ej: "scroll-horizontal"}, page:
+Framer.lazy(() =>
+import("https://framerusercontent.com/modules/HghHEGAdNTQQpcDDYrnt/wZNZWw9eSl7ABoVnXJSm/nOf5rOPWv.js")),
+path: "/gaming"}, yLUuGi5Zf: {elements: {lfmWsq8et: "scroll-horizontal"}, page:
+Framer.lazy(() =>
+import("https://framerusercontent.com/modules/ozYIonta1vhQo12YEFsG/AXfV8A6O2itfQCPsjIXa/yLUuGi5Zf.js")),
+path: "/oldHome"}, KwLyZeygT: {elements: {}, page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/5YeEFaeNumhq0o93BWRn/r1Cjjuh9vxcIifRtkmBU/KwLyZeygT.js")),
+path: "/home3"}, t3QCnhfQe: {elements: {}, page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/k7vZpiDxrooxCbnELlKw/HnRbbpC5Qj6oVc4iqUgK/t3QCnhfQe.js")),
+path: "/privacy"}, b2iH9sQHH: {elements: {}, page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/urUFV7yC1GfBrRFqpFfu/VuMhGlVT3FMlKw2jC7tN/b2iH9sQHH.js")),
+path: "/terms"}, DKb7tsKxS: {elements: {}, page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/whplwr8sc1GpbZJkuHix/OInZ7xMZFIi8tS6Bbaul/DKb7tsKxS.js")),
+path: "/page"}, l8E58yOtN: {elements: {}, page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/D23oVLFqlXYa8pywot0x/s6j27mS1REkzJjjcvn5M/l8E58yOtN.js")),
+path: "/blog"}, P8pMlfGIo: {elements: {}, page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/syLyT8GFQNSkBgEaheDn/8ZpcpDnLoYLIhdO2GVLY/P8pMlfGIo.js")),
+path: "/404"}, h95_wA1A_: {elements: {}, page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/equDk1C0t4c1myUDvRol/PnBrkgq3Vsdr6k2gWLJ1/h95_wA1A_.js")),
+path: "/accelerate.fun"}, fX9yXfNDK: {collectionId: "XVqTA32yG", elements: {},
+page: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/ZtAfRWXnzfaNSv2lu0PQ/clTWsMRsmfcXD84m9Jpv/fX9yXfNDK.js")),
+path: "/blog/:K2of11y4M"}} const locales = [{code: "en", id: "default", name:
+"English", slug: ""}] export async function getPageRoot({ routeId,
+pathVariables, localeId }) { // We don't want the initial render to immediately
+have to suspend. await routes[routeId].page.preload() const content =
+React.createElement( Framer.PageRoot, { isWebsite: true, routeId, pathVariables,
+routes, collectionUtils: {XVqTA32yG: async () => (await
+import("https://framerusercontent.com/modules/E2GyRAyBGqNSX3e3GFGE/WK6PddxM2RZ36vKOmP63/XVqTA32yG.js"))?.["utils"]},
+framerSiteId:
+"3a2758cac50417bb0dee3327f27251a724d24490934b2e016581f4a028db8b77",
+notFoundPage: Framer.lazy(() =>
+import("https://framerusercontent.com/modules/syLyT8GFQNSkBgEaheDn/8ZpcpDnLoYLIhdO2GVLY/P8pMlfGIo.js")),
+isReducedMotion: undefined, localeId, locales, preserveQueryParams: undefined, }
+) const contentWithFeaturesContext = React.createElement(
+Framer.LibraryFeaturesProvider, { children: content, value:
+{enableAsyncURLUpdates: true, replaceNestedLinks: true, useGranularSuspense:
+true, wrapUpdatesInTransitions: false} } ) const page =
+React.createElement(Framer.PageEffectsProvider, { children:
+contentWithFeaturesContext, value: {routes: {}} }) return page } const isBrowser
+= typeof document !== "undefined" if (isBrowser) {
+window.__framer_importFromPackage = (packageAndFilename, exportIdentifier) => ()
+=> { return React.createElement(Framer.ErrorPlaceholder, { error: 'Package
+component not supported: "' + exportIdentifier + '" in "' + packageAndFilename +
+'"' }) } // A lot of libraries assume process.env.NODE_ENV is present in
+runtime/buildtime, so we are polyfilling it window.process = {
+...window.process, env: { ...(window.process ? window.process.env: undefined),
+NODE_ENV: "production" } } window.__framer_events = window.__framer_events || []
+// Fallback support for stack gaps Framer.installFlexboxGapWorkaroundIfNeeded()
+const container = document.getElementById("main") // We know that #main is
+parsed before this script, so we don't need to wait for DOMContentLoaded or
+similar events. if ("framerHydrateV2" in container.dataset) main(true,
+container) else main(false, container) } function track() { if (!isBrowser)
+return window.__framer_events.push(arguments) } async function
+main(shouldHydrate, container) { try { let routeId, localeId, pathVariables,
+breakpoints if (shouldHydrate) { const routeData =
+JSON.parse(container.dataset.framerHydrateV2) routeId = routeData.routeId
+localeId = routeData.localeId pathVariables = routeData.pathVariables
+breakpoints = routeData.breakpoints } else { const routeData =
+Framer.inferInitialRouteFromPath(routes, decodeURIComponent(location.pathname),
+true, locales) routeId = routeData.routeId localeId = routeData.localeId
+pathVariables = routeData.pathVariables } const page = await getPageRoot({
+routeId, localeId, pathVariables }) function handleRecoverableError(error,
+errorInfo) { const componentStack = errorInfo?.componentStack
+console.warn("Recoverable error during hydration. Please check any custom code
+or code overrides to fix server/client mismatches.", error, componentStack) //
+we only want to collect 1%, because this can be quite noisy (floods the data
+pipeline) if (Math.random() > 0.01) return
+track("published_site_load_recoverable_error", { message: String(error),
+componentStack, // componentStack is more useful stack: componentStack ?
+undefined : error instanceof Error && typeof error.stack === "string" ?
+error.stack : null, }) } if (shouldHydrate) {
+Framer.withPerformanceMarks("framer-rewrite-breakpoints", () => {
+Framer.removeHiddenBreakpointLayersV2(breakpoints)
+window.__framer_onRewriteBreakpoints?.(breakpoints) }) const startTransition =
+React.startTransition startTransition(() => { Framer.markHydrationStart()
+Framer.setInitialHydrationState() if (true) Framer.turnOffReactEventHandling()
+ReactDOM.hydrateRoot(container, page, { onRecoverableError:
+handleRecoverableError }) }) } else { ReactDOM.createRoot(container, {
+onRecoverableError: handleRecoverableError }).render(page) } } catch (error) {
+track("published_site_load_error", { message: String(error), stack: error
+instanceof Error && typeof error.stack === "string" ? error.stack : null })
+throw error } }

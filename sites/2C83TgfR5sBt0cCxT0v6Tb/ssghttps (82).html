@@ -1,0 +1,27 @@
+import{jsx as _jsx}from"react/jsx-runtime";import*as React from"react";export
+default function distribution(props){const
+canvasRef=React.useRef(null);const[isIntersecting,setIntersecting]=React.useState(false);//
+Store a reference to the Spline application instance const
+appRef=React.useRef(null);// Intersection Observer to lazily load and unload the
+Spline scene React.useEffect(()=>{const observer=new
+IntersectionObserver(([entry])=>{// Update our state when observer callback
+fires
+setIntersecting(entry.isIntersecting);},{rootMargin:"300px"});if(canvasRef.current){observer.observe(canvasRef.current);}return()=>{if(canvasRef.current){observer.unobserve(canvasRef.current);}//
+If the component is unmounted and an app instance exists, unload it
+if(appRef.current){appRef.current.dispose();appRef.current=null;}};},[]);//
+useEffect to load the Spline scene only when the component is visible
+React.useEffect(()=>{if(isIntersecting&&!appRef.current){import("https://unpkg.com/@splinetool/runtime@1.0.91/build/runtime.js").then(module=>{const
+Application=module.Application;const canvas=canvasRef.current;if(canvas){const
+app=new
+Application(canvas);app.load("https://prod.spline.design/RVX3hJyO5iJ6lQdn/scene.splinecode").then(()=>{//
+Store the Spline app instance in the ref after it's loaded
+appRef.current=app;});}}).catch(error=>console.error("Failed to load Spline
+runtime:",error));}else if(!isIntersecting&&appRef.current){// Unload the scene
+if it's not intersecting and an app instance exists
+appRef.current.dispose();appRef.current=null;}},[isIntersecting])// Dependency
+array ensures this effect runs only when isIntersecting changes ;return
+/*#__PURE__*/_jsx("div",{style:containerStyle,children:/*#__PURE__*/_jsx("canvas",{ref:canvasRef,style:{width:"100%",height:"100%"}})});}const
+containerStyle={height:"100%",display:"flex",justifyContent:"center",alignItems:"center",overflow:"hidden"};
+export const __FramerMetadata__ =
+{"exports":{"default":{"type":"reactComponent","name":"distribution","slots":[],"annotations":{"framerContractVersion":"1"}},"__FramerMetadata__":{"type":"variable"}}}
+//# sourceMappingURL=./distribution.map
