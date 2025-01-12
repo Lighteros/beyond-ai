@@ -7116,7 +7116,7 @@ var oe = p(L),
                                       height: "100%",
                                       id: "tQDQrD1Qz",
                                       JehhH7PDO:
-                                        "https://trybeyondai.cc",
+                                        "https://app.trybeyondai.cc",
                                       kjxbmmQds: !0,
                                       layoutId: "tQDQrD1Qz",
                                       width: "100%",

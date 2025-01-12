@@ -291,7 +291,7 @@ var c1 = { damping: 60, delay: 0, mass: 1, stiffness: 500, type: "spring" },
                             height: "100%",
                             id: "MH8JT3HlE",
                             JehhH7PDO:
-                              "https://trybeyondai.cc",
+                              "https://app.trybeyondai.cc",
                             kjxbmmQds: !0,
                             layoutId: "MH8JT3HlE",
                             width: "100%",
